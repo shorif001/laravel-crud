@@ -16,9 +16,11 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students = Student::all();
-        return view('students.index',['students'=>$students]);
-        // return view('students.index',compact('students'));
+        $students = student::all();
+        return view('students.index', compact('students'));
+        
+        // or
+        // return view('students.index',['students'=>$students]);
     }
 
     /**
@@ -39,7 +41,7 @@ class StudentController extends Controller
      */
     public function store(StoreStudentRequest $request)
     {
-        $student = new Student;
+        $student = new student;
         $student->name = $request->name;
         $student->course = $request->course;
 
@@ -76,8 +78,8 @@ class StudentController extends Controller
      */
     public function edit($id)
     {
-        $student = Student::find($id);
-        return view('students.edit', ['student'=>$student]);
+        $student = student::find($id);
+        return view('students.edit', compact('student'));
     }
 
     /**
