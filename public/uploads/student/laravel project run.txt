@@ -1,0 +1,125 @@
+laravel project run:
+
+1st install this:
+
+=> sudo apt install php php-cli php-fpm php-json php-common php-mysql php-zip php-gd php-mbstring php-curl php-xml php-pear php-bcmath
+
+=> sudo apt install composer
+=> curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+=> composer global require "phpunit/php-invoker=1.1.*"
+=> curl -sS https://getcomposer.org/installer | php 
+=> mv composer.phar /usr/local/bin/composer
+=> composer update
+
+sudo composer self-update
+
+
+=> sudo apt update
+=> sudo apt install --no-install-recommends php8.1
+=> php -v
+
+=> composer global require laravel/installer
+
+laravel project create command:
+
+jodi global laravel install thake tahole eta kaj korbe.
+
+=> laravel new blog
+
+   r jodi global laravel install na thake tahole eta kaj korbe.
+
+=> composer create-project --prefer-dist laravel/laravel project-name
+
+laravel project run command:
+=> cd your-project-name
+
+=> php artisan serve
+    or
+=> php artisan serve --port=8083
+
+then:
+
+=> php artisan make:model Student -m
+=> php artisan migrate
+=> php artisan make:controller StudentController -r
+
+or
+nicher gulo bebohar korle controller toiri korte hobena. she auto controller toiri korbe
+=> php artisan make:model -a Student
+=> php artisan migrate:fresh
+
+========= Database Create ==========
+
+sudo mysql -u root
+or 
+sudo mysql -u root -p
+
+# your login username dekhar jonno.
+select user,host,plugin from mysql.user;
+
+# your databases dekhar jonno.
+show databases;
+
+CREATE USER loginusername@localhost identified with mysql_native_password by 'password';
+or
+create user loginusername@localhost identified by 'password';
+
+grant all on databasename.* to loginusername@localhost;
+flush privileges;
+exit
+systemctl restart apache2
+
+http://127.0.0.1/phpmyadmin
+or
+http://localhost/phpmyadmin
+
+user Name: loginusername
+password: password
+
+*************
+
+# 1 loginusername a onek gulo database create korar jonno:
+
+sudo mysql -u root
+grant all on your-new-database-name.* to loginusername@localhost;
+flush privileges;
+exit
+====================
+
+
+========== database er shathe .env file configur =========
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=database-name
+DB_USERNAME=database-login-user-name
+DB_PASSWORD=database-login-password
+
+=======================
+
+
+
+=========== project clone korle ================
+
+project terminal open kore:
+
+=> composer i
+=> composer update
+=> composer dump-autoload
+
+== database er shathe .env file configur ==
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=database-name
+DB_USERNAME=database-login-user-name
+DB_PASSWORD=database-login-password
+
+=======================
+
+then:
+
+php artisan migrate:fresh 
+php artisan serve

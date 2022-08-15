@@ -1,0 +1,53 @@
+open your linux terminal then copy and paste this command:
+
+lsb_release -a
+apt install phpmyadmin -y
+
+select: yes
+type pass: admin
+type confirm pass: admin
+
+sudo apt-get install mysql-server
+
+=====install done======
+
+
+=====Create Database===
+
+sudo mysql -u root
+or 
+sudo mysql -u root -p
+
+# your login username dekhar jonno.
+select user,host,plugin from mysql.user;
+
+# your databases dekhar jonno.
+show databases;
+
+CREATE USER loginusername@localhost identified with mysql_native_password by 'password';
+or
+create user loginusername@localhost identified by 'password';
+
+grant all on databasename.* to loginusername@localhost;
+flush privileges;
+exit
+systemctl restart apache2
+
+http://127.0.0.1/phpmyadmin
+or
+http://localhost/phpmyadmin
+
+user Name: loginusername
+password: password
+
+==============
+
+# 1 loginusername a onek gulo database create korar jonno:
+
+sudo mysql -u root
+grant all on your-new-database-name.* to loginusername@localhost;
+flush privileges;
+exit
+
+
+jodi browser a phpmyadmin login kora thake tahole logout kore login korte hobe.
