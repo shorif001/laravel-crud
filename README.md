@@ -72,12 +72,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 - DB_DATABASE=image_crud
 
-## data post/create korar shomoy jodi 403 THIS ACTION IS UNAUTHORIZED. error pan.
+### data post/create korar shomoy jodi 403 THIS ACTION IS UNAUTHORIZED. error pan.
 
 - when you return false you found : 403 THIS ACTION IS UNAUTHORIZED.
 - solved: Reuests > StoreStudentReuest.php > authorize return true
 
-## data put/update korar shomoy jodi 403 THIS ACTION IS UNAUTHORIZED. error pan.
+### data put/update korar shomoy jodi 403 THIS ACTION IS UNAUTHORIZED. error pan.
 
 - when you return false you found : 403 THIS ACTION IS UNAUTHORIZED.
 - solved: Reuests > UpdateStudentRequest.php > authorize return true
