@@ -54,7 +54,7 @@ class StudentController extends Controller
         }
 
         $student->save();
-        return redirect()->back()->with('status', 'student upload succesfully');
+        return redirect('/students')->with('status', 'Student added Successfully');
     }
 
     /**
