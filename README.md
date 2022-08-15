@@ -82,6 +82,10 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - when you return false you found : 403 THIS ACTION IS UNAUTHORIZED.
 - solved: Reuests > UpdateStudentRequest.php > authorize return true
 
+- old file delete korar jonno ei file ta StudentCController.php te upore use/import korte hobe.
+
+- use Illuminate\Support\Facades\File;
+
 ## 2nd time project run korle 404 | not found error pan.
 
 - stop your running project ctrl + c
