@@ -20,7 +20,7 @@
                 @if (session('status'))
                 <h6 class="alert alert-success">{{session('status')}}</h6>
                 @endif
-                
+
                 <div class="card-header">
                     <h4>Add Student IMAGE
                         <a href="{{url('/students')}}" class="btn btn-primary float-end m-0">Back</a>
@@ -28,6 +28,8 @@
                 </div>
                 <div class="card-body">
                     <form action="{{url('add-student')}}" method="post" enctype="multipart/form-data">
+                        {{-- or --}}
+                        {{-- <form action="{{ route('save-sarif') }}" method="POST" enctype="multipart/form-data"> --}}
                         @csrf
 
                         <div class="form-group mb-3">

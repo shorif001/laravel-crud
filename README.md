@@ -93,6 +93,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - then
 
 - php artisan optimize
+- php artisan route:clear
 - php artisan serve
 
 ## routing kora hoise shob thik ase tobuo route kaj korsena tokhon.
@@ -119,5 +120,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 then:
 
-- php artisan migrate:fresh 
+- php artisan migrate:fresh
 - php artisan serve
