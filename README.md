@@ -70,8 +70,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - php artisan migrate
 - php artisan make:controller StudentController -r
 
-- DB_DATABASE=image_crud
-
 ### data post/create korar shomoy jodi 403 THIS ACTION IS UNAUTHORIZED. error pan.
 
 - when you return false you found : 403 THIS ACTION IS UNAUTHORIZED.
@@ -99,6 +97,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## routing kora hoise shob thik ase tobuo route kaj korsena tokhon.
 - ctrl + c
 - php artisan optimize
+- php artisan route:clear
 - php artisan serve
 
 ## project clone korle
